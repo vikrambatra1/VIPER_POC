@@ -14,5 +14,5 @@ struct FeedModel {
     let pubData: String
     let description: String
     let link: String
-    let feedImageUrl: String?
+    let imageUrl: String?
 }

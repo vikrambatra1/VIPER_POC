@@ -36,7 +36,7 @@ extension GridViewController: UICollectionViewDelegate, UICollectionViewDataSour
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = self.collectionView.dequeueReusableCell(withReuseIdentifier: "FeedCollectionViewCell", for: indexPath) as! FeedCollectionViewCell
         let feed = feeds[indexPath.item]
-        if let imageUrl = feed.feedImageUrl {
+        if let imageUrl = feed.imageUrl {
             cell.imageView.loadImage(withUrl: imageUrl)
         }
         return cell

@@ -46,24 +46,17 @@ class FeedsViewController: UIViewController, XMLParserDelegate {
     }
     
     func loadData() {
-        let url = URL(string: "https://feeds.skynews.com/feeds/rss/technology.xml")!
+        let url = URL(string: FEEDS_API)!
         let myParser : XmlParserManager = XmlParserManager().initWithURL(url) as! XmlParserManager
         let feedImgs = myParser.img as [AnyObject]
         let myFeeds = myParser.feeds
         self.feeds = self.convertToDataModel(feedImages: feedImgs as! [String], feeds: myFeeds as [AnyObject])
     }
-    
+
     func convertToDataModel(feedImages: [String], feeds: [AnyObject]) -> [FeedModel] {
-        var feedList: [FeedModel] = []
-        for (index, feed) in feeds.enumerated() {
+        return feeds.enumerated().map({ (index, feed) in
             let feedDict = feed as! [String: String]
-            var imgStr: String?
-            if feedImages.indices.contains(index) {
-                imgStr = feedImages[index]
-            }
-            let feedModel = FeedModel(title: feedDict["title"] ?? "", pubData: feedDict["pubData"] ?? "", description: feedDict["description"] ?? "", link: feedDict["link"] ?? "", feedImageUrl: imgStr )
-            feedList.append(feedModel)
-        }
-        return feedList
+            return FeedModel(title: feedDict["title"] ?? "", pubData: feedDict["pubData"] ?? "", description: feedDict["description"] ?? "", link: feedDict["link"] ?? "", imageUrl: feedImages.indices.contains(index) ? feedImages[index] : nil )
+        })
     }
 }

@@ -12,15 +12,20 @@
 		F42483CE23BA281800358133 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F42483CC23BA281800358133 /* Main.storyboard */; };
 		F42483D023BA281A00358133 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F42483CF23BA281A00358133 /* Assets.xcassets */; };
 		F42483D323BA281A00358133 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F42483D123BA281A00358133 /* LaunchScreen.storyboard */; };
-		F42483DB23BDCBE700358133 /* FeedsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42483DA23BDCBE700358133 /* FeedsViewController.swift */; };
-		F42483E723BE0AC200358133 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42483E623BE0AC200358133 /* ListViewController.swift */; };
-		F42483E923BE0AD500358133 /* GridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42483E823BE0AD500358133 /* GridViewController.swift */; };
-		F42483EB23BE2E8A00358133 /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42483EA23BE2E8A00358133 /* FeedTableViewCell.swift */; };
-		F42483ED23BE34A600358133 /* FeedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42483EC23BE34A600358133 /* FeedModel.swift */; };
-		F42483EF23BF361B00358133 /* FeedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42483EE23BF361B00358133 /* FeedCollectionViewCell.swift */; };
-		F42483F523BF7AC800358133 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42483F423BF7AC800358133 /* APIService.swift */; };
-		F42483F723BF871A00358133 /* XmlParserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42483F623BF871A00358133 /* XmlParserManager.swift */; };
-		F424843623C3104A00358133 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F424843523C3104A00358133 /* Extension.swift */; };
+		F424844C23C3416200358133 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F424843D23C3416200358133 /* Extension.swift */; };
+		F424844D23C3416200358133 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F424843F23C3416200358133 /* APIService.swift */; };
+		F424844E23C3416200358133 /* FeedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F424844123C3416200358133 /* FeedModel.swift */; };
+		F424844F23C3416200358133 /* XmlParserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F424844323C3416200358133 /* XmlParserManager.swift */; };
+		F424845123C3416200358133 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F424844623C3416200358133 /* ListViewController.swift */; };
+		F424845223C3416200358133 /* GridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F424844723C3416200358133 /* GridViewController.swift */; };
+		F424845323C3416200358133 /* FeedsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F424844823C3416200358133 /* FeedsViewController.swift */; };
+		F424845723C342F600358133 /* EndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = F424845623C342F600358133 /* EndPoints.swift */; };
+		F424845C23C34E4100358133 /* FeedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F424845A23C34E4100358133 /* FeedCollectionViewCell.swift */; };
+		F424845D23C34E4100358133 /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F424845B23C34E4100358133 /* FeedTableViewCell.swift */; };
+		F424846123C364CA00358133 /* FeedProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = F424846023C364CA00358133 /* FeedProtocols.swift */; };
+		F424846323C3726E00358133 /* FeedsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F424846223C3726E00358133 /* FeedsPresenter.swift */; };
+		F424846523C3728000358133 /* FeedsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F424846423C3728000358133 /* FeedsInteractor.swift */; };
+		F424846723C3729100358133 /* FeedsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F424846623C3729100358133 /* FeedsRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,15 +38,20 @@
 		F42483CF23BA281A00358133 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F42483D223BA281A00358133 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F42483D423BA281A00358133 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F42483DA23BDCBE700358133 /* FeedsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedsViewController.swift; sourceTree = "<group>"; };
-		F42483E623BE0AC200358133 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
-		F42483E823BE0AD500358133 /* GridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridViewController.swift; sourceTree = "<group>"; };
-		F42483EA23BE2E8A00358133 /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
-		F42483EC23BE34A600358133 /* FeedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedModel.swift; sourceTree = "<group>"; };
-		F42483EE23BF361B00358133 /* FeedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCollectionViewCell.swift; sourceTree = "<group>"; };
-		F42483F423BF7AC800358133 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
-		F42483F623BF871A00358133 /* XmlParserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XmlParserManager.swift; sourceTree = "<group>"; };
-		F424843523C3104A00358133 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		F424843D23C3416200358133 /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		F424843F23C3416200358133 /* APIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		F424844123C3416200358133 /* FeedModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedModel.swift; sourceTree = "<group>"; };
+		F424844323C3416200358133 /* XmlParserManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XmlParserManager.swift; sourceTree = "<group>"; };
+		F424844623C3416200358133 /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		F424844723C3416200358133 /* GridViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridViewController.swift; sourceTree = "<group>"; };
+		F424844823C3416200358133 /* FeedsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedsViewController.swift; sourceTree = "<group>"; };
+		F424845623C342F600358133 /* EndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoints.swift; sourceTree = "<group>"; };
+		F424845A23C34E4100358133 /* FeedCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedCollectionViewCell.swift; sourceTree = "<group>"; };
+		F424845B23C34E4100358133 /* FeedTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
+		F424846023C364CA00358133 /* FeedProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedProtocols.swift; sourceTree = "<group>"; };
+		F424846223C3726E00358133 /* FeedsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedsPresenter.swift; sourceTree = "<group>"; };
+		F424846423C3728000358133 /* FeedsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedsInteractor.swift; sourceTree = "<group>"; };
+		F424846623C3729100358133 /* FeedsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedsRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,22 +104,131 @@
 		F42483C723BA281800358133 /* VIPER_POC */ = {
 			isa = PBXGroup;
 			children = (
+				F424845523C341FD00358133 /* AppIcons */,
+				F424843B23C3416200358133 /* Common */,
+				F424845E23C34EB300358133 /* Storyboard */,
+				F424843E23C3416200358133 /* FeedModule */,
+				F424843F23C3416200358133 /* APIService.swift */,
+				F424844323C3416200358133 /* XmlParserManager.swift */,
 				F42483C823BA281800358133 /* AppDelegate.swift */,
-				F42483DA23BDCBE700358133 /* FeedsViewController.swift */,
-				F42483E623BE0AC200358133 /* ListViewController.swift */,
-				F42483E823BE0AD500358133 /* GridViewController.swift */,
-				F42483EA23BE2E8A00358133 /* FeedTableViewCell.swift */,
-				F42483EE23BF361B00358133 /* FeedCollectionViewCell.swift */,
-				F42483EC23BE34A600358133 /* FeedModel.swift */,
-				F42483CC23BA281800358133 /* Main.storyboard */,
-				F42483CF23BA281A00358133 /* Assets.xcassets */,
-				F42483D123BA281A00358133 /* LaunchScreen.storyboard */,
 				F42483D423BA281A00358133 /* Info.plist */,
-				F42483F423BF7AC800358133 /* APIService.swift */,
-				F42483F623BF871A00358133 /* XmlParserManager.swift */,
-				F424843523C3104A00358133 /* Extension.swift */,
 			);
 			path = VIPER_POC;
+			sourceTree = "<group>";
+		};
+		F424843B23C3416200358133 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				F424845823C3466B00358133 /* EndPoints */,
+				F424843C23C3416200358133 /* Extensions */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		F424843C23C3416200358133 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F424843D23C3416200358133 /* Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F424843E23C3416200358133 /* FeedModule */ = {
+			isa = PBXGroup;
+			children = (
+				F424845F23C3647400358133 /* Protocols */,
+				F424844423C3416200358133 /* View */,
+				F424844223C3416200358133 /* Presenter */,
+				F424844A23C3416200358133 /* Interactor */,
+				F424844023C3416200358133 /* Entity */,
+				F424844B23C3416200358133 /* Router */,
+			);
+			path = FeedModule;
+			sourceTree = "<group>";
+		};
+		F424844023C3416200358133 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				F424844123C3416200358133 /* FeedModel.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		F424844223C3416200358133 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				F424846223C3726E00358133 /* FeedsPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		F424844423C3416200358133 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F424844823C3416200358133 /* FeedsViewController.swift */,
+				F424844623C3416200358133 /* ListViewController.swift */,
+				F424844723C3416200358133 /* GridViewController.swift */,
+				F424845923C34E4100358133 /* SubView */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F424844A23C3416200358133 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				F424846423C3728000358133 /* FeedsInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		F424844B23C3416200358133 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				F424846623C3729100358133 /* FeedsRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		F424845523C341FD00358133 /* AppIcons */ = {
+			isa = PBXGroup;
+			children = (
+				F42483CF23BA281A00358133 /* Assets.xcassets */,
+			);
+			path = AppIcons;
+			sourceTree = "<group>";
+		};
+		F424845823C3466B00358133 /* EndPoints */ = {
+			isa = PBXGroup;
+			children = (
+				F424845623C342F600358133 /* EndPoints.swift */,
+			);
+			path = EndPoints;
+			sourceTree = "<group>";
+		};
+		F424845923C34E4100358133 /* SubView */ = {
+			isa = PBXGroup;
+			children = (
+				F424845A23C34E4100358133 /* FeedCollectionViewCell.swift */,
+				F424845B23C34E4100358133 /* FeedTableViewCell.swift */,
+			);
+			path = SubView;
+			sourceTree = "<group>";
+		};
+		F424845E23C34EB300358133 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				F42483CC23BA281800358133 /* Main.storyboard */,
+				F42483D123BA281A00358133 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		F424845F23C3647400358133 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				F424846023C364CA00358133 /* FeedProtocols.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,16 +328,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F42483E923BE0AD500358133 /* GridViewController.swift in Sources */,
-				F42483ED23BE34A600358133 /* FeedModel.swift in Sources */,
-				F42483F723BF871A00358133 /* XmlParserManager.swift in Sources */,
-				F42483DB23BDCBE700358133 /* FeedsViewController.swift in Sources */,
+				F424845723C342F600358133 /* EndPoints.swift in Sources */,
+				F424846723C3729100358133 /* FeedsRouter.swift in Sources */,
+				F424845223C3416200358133 /* GridViewController.swift in Sources */,
+				F424845C23C34E4100358133 /* FeedCollectionViewCell.swift in Sources */,
+				F424846123C364CA00358133 /* FeedProtocols.swift in Sources */,
 				F42483C923BA281800358133 /* AppDelegate.swift in Sources */,
-				F42483E723BE0AC200358133 /* ListViewController.swift in Sources */,
-				F42483EF23BF361B00358133 /* FeedCollectionViewCell.swift in Sources */,
-				F42483F523BF7AC800358133 /* APIService.swift in Sources */,
-				F42483EB23BE2E8A00358133 /* FeedTableViewCell.swift in Sources */,
-				F424843623C3104A00358133 /* Extension.swift in Sources */,
+				F424846323C3726E00358133 /* FeedsPresenter.swift in Sources */,
+				F424844D23C3416200358133 /* APIService.swift in Sources */,
+				F424844C23C3416200358133 /* Extension.swift in Sources */,
+				F424846523C3728000358133 /* FeedsInteractor.swift in Sources */,
+				F424844E23C3416200358133 /* FeedModel.swift in Sources */,
+				F424845323C3416200358133 /* FeedsViewController.swift in Sources */,
+				F424844F23C3416200358133 /* XmlParserManager.swift in Sources */,
+				F424845123C3416200358133 /* ListViewController.swift in Sources */,
+				F424845D23C34E4100358133 /* FeedTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
