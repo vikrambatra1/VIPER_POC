@@ -6,6 +6,5 @@ target 'VIPER_POC' do
   use_frameworks!
 
   # Pods for VIPER_POC
-  pod 'SwiftyXMLParser'
 
 end

@@ -10,7 +10,9 @@ import Foundation
 import UIKit
 
 struct FeedModel {
-    let feedTitle: String
-    let feedImage: UIImage
-    let feedDescription: String
+    let title: String
+    let pubData: String
+    let description: String
+    let link: String
+    let feedImageUrl: String
 }

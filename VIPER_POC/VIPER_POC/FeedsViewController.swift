@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SwiftyXMLParser
 
 class FeedsViewController: UIViewController, XMLParserDelegate {
 
@@ -21,36 +20,16 @@ class FeedsViewController: UIViewController, XMLParserDelegate {
         super.viewDidLoad()
     }
 
-    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        let feed1 = FeedModel(feedTitle: "Title1", feedImage: UIImage(named: "defaultFeedImage")!, feedDescription: "AAAAAAAAAAA")
-        let feed2 = FeedModel(feedTitle: "Title2", feedImage: UIImage(named: "defaultFeedImage")!, feedDescription: "BBBBBBBBBB")
-        let feed3 = FeedModel(feedTitle: "Title3", feedImage: UIImage(named: "defaultFeedImage")!, feedDescription: "CCCCCCCCC")
-        let feed4 = FeedModel(feedTitle: "Title4", feedImage: UIImage(named: "defaultFeedImage")!, feedDescription: "AAAAAAAAAAA")
-        let feed5 = FeedModel(feedTitle: "Title1", feedImage: UIImage(named: "defaultFeedImage")!, feedDescription: "AAAAAAAAAAA")
-        let feed6 = FeedModel(feedTitle: "Title1", feedImage: UIImage(named: "defaultFeedImage")!, feedDescription: "AAAAAAAAAAA")
-        let feed7 = FeedModel(feedTitle: "Title1", feedImage: UIImage(named: "defaultFeedImage")!, feedDescription: "AAAAAAAAAAA")
-        let feed8 = FeedModel(feedTitle: "Title1", feedImage: UIImage(named: "defaultFeedImage")!, feedDescription: "AAAAAAAAAAA")
+        self.loadData()
+        
+        let listViewController = self.children[0] as! ListViewController
+        listViewController.feeds = feeds
 
-        feeds.append(feed1)
-        feeds.append(feed2)
-        feeds.append(feed3)
-        feeds.append(feed4)
-        feeds.append(feed5)
-        feeds.append(feed6)
-        feeds.append(feed7)
-        feeds.append(feed8)
-        
-        let aa = self.children[0] as! ListViewController
-        aa.feeds = feeds
-
-        let bb = self.children[1] as! GridViewController
-        bb.feeds = feeds
-        
-//        self.loadData()
-        
+        let gridViewController = self.children[1] as! GridViewController
+        gridViewController.feeds = feeds
     }
     
     //MARK: Button Actions
@@ -69,7 +48,19 @@ class FeedsViewController: UIViewController, XMLParserDelegate {
     func loadData() {
         let url = URL(string: "https://feeds.skynews.com/feeds/rss/technology.xml")!
         let myParser : XmlParserManager = XmlParserManager().initWithURL(url) as! XmlParserManager
-//        let feedImgs = myParser.img as [AnyObject]
+        let feedImgs = myParser.img as [AnyObject]
         let myFeeds = myParser.feeds
+        self.feeds = self.convertToDataModel(feedImages: feedImgs as! [String], feeds: myFeeds as [AnyObject])
+    }
+    
+    func convertToDataModel(feedImages: [String], feeds: [AnyObject]) -> [FeedModel] {
+        let sequence = zip(feedImages, feeds)
+        var feedList: [FeedModel] = []
+        for (feedImage, feed) in sequence {
+            let feedDict = feed as! [String: String]
+            let feedModel = FeedModel(title: feedDict["title"] ?? "", pubData: feedDict["pubData"] ?? "", description: feedDict["description"] ?? "", link: feedDict["link"] ?? "", feedImageUrl: feedImage )
+            feedList.append(feedModel)
+        }
+        return feedList
     }
 }

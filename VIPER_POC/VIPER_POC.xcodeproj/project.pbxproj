@@ -120,7 +120,6 @@
 				F42483C123BA281800358133 /* Sources */,
 				F42483C223BA281800358133 /* Frameworks */,
 				F42483C323BA281800358133 /* Resources */,
-				4553638A09A712BE17D6F096 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -178,23 +177,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		4553638A09A712BE17D6F096 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-VIPER_POC/Pods-VIPER_POC-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-VIPER_POC/Pods-VIPER_POC-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VIPER_POC/Pods-VIPER_POC-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		5200734974FFA18279B12473 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
