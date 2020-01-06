@@ -31,7 +31,7 @@ extension ListViewController: UITableViewDataSource, UITableViewDelegate {
                    cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.feedsTableView.dequeueReusableCell(withIdentifier: "FeedTableViewCell") as! FeedTableViewCell
         let feed = feeds[indexPath.row]
-//        cell.feedImage.image = feed.feedImageUrl
+        cell.feedImage.loadImage(withUrl: feed.feedImageUrl)
         cell.feedTitle.text = feed.title
         return cell
     }
@@ -41,6 +41,6 @@ extension ListViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(indexPath.row)
+        print(feeds[indexPath.row])
     }
 }

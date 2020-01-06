@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -20,6 +20,7 @@
 		F42483EF23BF361B00358133 /* FeedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42483EE23BF361B00358133 /* FeedCollectionViewCell.swift */; };
 		F42483F523BF7AC800358133 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42483F423BF7AC800358133 /* APIService.swift */; };
 		F42483F723BF871A00358133 /* XmlParserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42483F623BF871A00358133 /* XmlParserManager.swift */; };
+		F424843623C3104A00358133 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F424843523C3104A00358133 /* Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		F42483EE23BF361B00358133 /* FeedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCollectionViewCell.swift; sourceTree = "<group>"; };
 		F42483F423BF7AC800358133 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		F42483F623BF871A00358133 /* XmlParserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XmlParserManager.swift; sourceTree = "<group>"; };
+		F424843523C3104A00358133 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				F42483D423BA281A00358133 /* Info.plist */,
 				F42483F423BF7AC800358133 /* APIService.swift */,
 				F42483F623BF871A00358133 /* XmlParserManager.swift */,
+				F424843523C3104A00358133 /* Extension.swift */,
 			);
 			path = VIPER_POC;
 			sourceTree = "<group>";
@@ -215,6 +218,7 @@
 				F42483EF23BF361B00358133 /* FeedCollectionViewCell.swift in Sources */,
 				F42483F523BF7AC800358133 /* APIService.swift in Sources */,
 				F42483EB23BE2E8A00358133 /* FeedTableViewCell.swift in Sources */,
+				F424843623C3104A00358133 /* Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
