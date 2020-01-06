@@ -54,11 +54,14 @@ class FeedsViewController: UIViewController, XMLParserDelegate {
     }
     
     func convertToDataModel(feedImages: [String], feeds: [AnyObject]) -> [FeedModel] {
-        let sequence = zip(feedImages, feeds)
         var feedList: [FeedModel] = []
-        for (feedImage, feed) in sequence {
+        for (index, feed) in feeds.enumerated() {
             let feedDict = feed as! [String: String]
-            let feedModel = FeedModel(title: feedDict["title"] ?? "", pubData: feedDict["pubData"] ?? "", description: feedDict["description"] ?? "", link: feedDict["link"] ?? "", feedImageUrl: feedImage )
+            var imgStr: String?
+            if feedImages.indices.contains(index) {
+                imgStr = feedImages[index]
+            }
+            let feedModel = FeedModel(title: feedDict["title"] ?? "", pubData: feedDict["pubData"] ?? "", description: feedDict["description"] ?? "", link: feedDict["link"] ?? "", feedImageUrl: imgStr )
             feedList.append(feedModel)
         }
         return feedList

@@ -148,6 +148,7 @@
                             <constraint firstItem="biO-18-c8Z" firstAttribute="leading" secondItem="nEz-rJ-Oye" secondAttribute="leading" id="afe-by-337"/>
                             <constraint firstAttribute="bottom" secondItem="biO-18-c8Z" secondAttribute="bottom" id="k9s-iT-MyT"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="E2s-WQ-UrY"/>
                     </view>
                     <connections>
                         <outlet property="feedsTableView" destination="biO-18-c8Z" id="JWU-Hd-U2h"/>
@@ -182,7 +183,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LxU-TO-0cW">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultFeedImage" translatesAutoresizingMaskIntoConstraints="NO" id="LxU-TO-0cW">
                                                     <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
                                                 </imageView>
                                             </subviews>
@@ -211,6 +212,7 @@
                             <constraint firstAttribute="trailing" secondItem="lnj-lZ-Wll" secondAttribute="trailing" id="JY4-eH-9vy"/>
                             <constraint firstItem="lnj-lZ-Wll" firstAttribute="leading" secondItem="O2k-pn-zDq" secondAttribute="leading" id="LHM-du-0ty"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="DPm-eT-IfF"/>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="lnj-lZ-Wll" id="Kff-K3-mxb"/>

@@ -26,6 +26,8 @@ extension UIImageView {
         URLSession.shared.dataTask(with: url!, completionHandler: { (data, response, error) in
             if error != nil {
                 print(error!)
+                //Set default
+                self.image = UIImage(named: "defaultFeedImage")
                 return
             }
             

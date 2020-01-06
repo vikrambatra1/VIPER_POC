@@ -31,7 +31,9 @@ extension ListViewController: UITableViewDataSource, UITableViewDelegate {
                    cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.feedsTableView.dequeueReusableCell(withIdentifier: "FeedTableViewCell") as! FeedTableViewCell
         let feed = feeds[indexPath.row]
-        cell.feedImage.loadImage(withUrl: feed.feedImageUrl)
+        if let imageUrl = feed.feedImageUrl {
+            cell.feedImage.loadImage(withUrl: imageUrl)
+        }
         cell.feedTitle.text = feed.title
         return cell
     }
