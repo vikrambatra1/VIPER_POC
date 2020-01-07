@@ -13,7 +13,6 @@
 		F42483D023BA281A00358133 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F42483CF23BA281A00358133 /* Assets.xcassets */; };
 		F42483D323BA281A00358133 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F42483D123BA281A00358133 /* LaunchScreen.storyboard */; };
 		F424844C23C3416200358133 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F424843D23C3416200358133 /* Extension.swift */; };
-		F424844D23C3416200358133 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F424843F23C3416200358133 /* APIService.swift */; };
 		F424844E23C3416200358133 /* FeedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F424844123C3416200358133 /* FeedModel.swift */; };
 		F424844F23C3416200358133 /* XmlParserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F424844323C3416200358133 /* XmlParserManager.swift */; };
 		F424845123C3416200358133 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F424844623C3416200358133 /* ListViewController.swift */; };
@@ -26,6 +25,7 @@
 		F424846323C3726E00358133 /* FeedsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F424846223C3726E00358133 /* FeedsPresenter.swift */; };
 		F424846523C3728000358133 /* FeedsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F424846423C3728000358133 /* FeedsInteractor.swift */; };
 		F424846723C3729100358133 /* FeedsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F424846623C3729100358133 /* FeedsRouter.swift */; };
+		F424846923C4BBE900358133 /* FeedDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F424846823C4BBE900358133 /* FeedDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,7 +39,6 @@
 		F42483D223BA281A00358133 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F42483D423BA281A00358133 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F424843D23C3416200358133 /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
-		F424843F23C3416200358133 /* APIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		F424844123C3416200358133 /* FeedModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedModel.swift; sourceTree = "<group>"; };
 		F424844323C3416200358133 /* XmlParserManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XmlParserManager.swift; sourceTree = "<group>"; };
 		F424844623C3416200358133 /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
@@ -52,6 +51,7 @@
 		F424846223C3726E00358133 /* FeedsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedsPresenter.swift; sourceTree = "<group>"; };
 		F424846423C3728000358133 /* FeedsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedsInteractor.swift; sourceTree = "<group>"; };
 		F424846623C3729100358133 /* FeedsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedsRouter.swift; sourceTree = "<group>"; };
+		F424846823C4BBE900358133 /* FeedDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,8 +108,6 @@
 				F424843B23C3416200358133 /* Common */,
 				F424845E23C34EB300358133 /* Storyboard */,
 				F424843E23C3416200358133 /* FeedModule */,
-				F424843F23C3416200358133 /* APIService.swift */,
-				F424844323C3416200358133 /* XmlParserManager.swift */,
 				F42483C823BA281800358133 /* AppDelegate.swift */,
 				F42483D423BA281A00358133 /* Info.plist */,
 			);
@@ -121,6 +119,7 @@
 			children = (
 				F424845823C3466B00358133 /* EndPoints */,
 				F424843C23C3416200358133 /* Extensions */,
+				F424846A23C4C59600358133 /* XMLParser */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -168,6 +167,7 @@
 				F424844823C3416200358133 /* FeedsViewController.swift */,
 				F424844623C3416200358133 /* ListViewController.swift */,
 				F424844723C3416200358133 /* GridViewController.swift */,
+				F424846823C4BBE900358133 /* FeedDetailsViewController.swift */,
 				F424845923C34E4100358133 /* SubView */,
 			);
 			path = View;
@@ -229,6 +229,14 @@
 				F424846023C364CA00358133 /* FeedProtocols.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		F424846A23C4C59600358133 /* XMLParser */ = {
+			isa = PBXGroup;
+			children = (
+				F424844323C3416200358133 /* XmlParserManager.swift */,
+			);
+			path = XMLParser;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -331,11 +339,11 @@
 				F424845723C342F600358133 /* EndPoints.swift in Sources */,
 				F424846723C3729100358133 /* FeedsRouter.swift in Sources */,
 				F424845223C3416200358133 /* GridViewController.swift in Sources */,
+				F424846923C4BBE900358133 /* FeedDetailsViewController.swift in Sources */,
 				F424845C23C34E4100358133 /* FeedCollectionViewCell.swift in Sources */,
 				F424846123C364CA00358133 /* FeedProtocols.swift in Sources */,
 				F42483C923BA281800358133 /* AppDelegate.swift in Sources */,
 				F424846323C3726E00358133 /* FeedsPresenter.swift in Sources */,
-				F424844D23C3416200358133 /* APIService.swift in Sources */,
 				F424844C23C3416200358133 /* Extension.swift in Sources */,
 				F424846523C3728000358133 /* FeedsInteractor.swift in Sources */,
 				F424844E23C3416200358133 /* FeedModel.swift in Sources */,

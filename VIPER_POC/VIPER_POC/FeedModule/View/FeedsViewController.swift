@@ -10,10 +10,10 @@ import UIKit
 
 class FeedsViewController: UIViewController, XMLParserDelegate {
 
+    var presenter: ViewToPresenterProtocol?
     @IBOutlet weak var listViewContainer: UIView!
     @IBOutlet weak var gridViewContainer: UIView!
     @IBOutlet weak var navBarButton: UIBarButtonItem!
-    var feeds: [FeedModel] = []
     
     //MARK: View Methods
     override func viewDidLoad() {
@@ -22,14 +22,7 @@ class FeedsViewController: UIViewController, XMLParserDelegate {
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
-        self.loadData()
-        
-        let listViewController = self.children[0] as! ListViewController
-        listViewController.feeds = feeds
-
-        let gridViewController = self.children[1] as! GridViewController
-        gridViewController.feeds = feeds
+        presenter?.fetchFeeds()
     }
     
     //MARK: Button Actions
@@ -44,19 +37,20 @@ class FeedsViewController: UIViewController, XMLParserDelegate {
             self.navBarButton.title = "List"
         }
     }
-    
-    func loadData() {
-        let url = URL(string: FEEDS_API)!
-        let myParser : XmlParserManager = XmlParserManager().initWithURL(url) as! XmlParserManager
-        let feedImgs = myParser.img as [AnyObject]
-        let myFeeds = myParser.feeds
-        self.feeds = self.convertToDataModel(feedImages: feedImgs as! [String], feeds: myFeeds as [AnyObject])
-    }
+}
 
-    func convertToDataModel(feedImages: [String], feeds: [AnyObject]) -> [FeedModel] {
-        return feeds.enumerated().map({ (index, feed) in
-            let feedDict = feed as! [String: String]
-            return FeedModel(title: feedDict["title"] ?? "", pubData: feedDict["pubData"] ?? "", description: feedDict["description"] ?? "", link: feedDict["link"] ?? "", imageUrl: feedImages.indices.contains(index) ? feedImages[index] : nil )
-        })
+extension FeedsViewController: PresenterToViewProtocol {
+    func showFeeds(feeds: [FeedModel]) {
+        let listViewController = self.children[0] as! ListViewController
+        listViewController.feeds = feeds
+        
+        let gridViewController = self.children[1] as! GridViewController
+        gridViewController.feeds = feeds
+    }
+    
+    func showError() {
+        let alert = UIAlertController(title: "Alert", message: "Error occured while fetching Feeds", preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "Okay", style: UIAlertAction.Style.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
 }
