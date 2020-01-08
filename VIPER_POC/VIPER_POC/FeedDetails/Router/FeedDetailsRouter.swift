@@ -22,7 +22,6 @@ class FeedDetailsRouter: FeedDetailsPresenterToRouterProtocol {
         presenter.router = router
 
         return view
-
     }
 
     static var mainstoryboard: UIStoryboard {

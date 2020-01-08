@@ -10,6 +10,9 @@ import UIKit
 
 class FeedDetailsViewController: UIViewController {
     
+    @IBOutlet weak var feedTitleLabel: UILabel!
+    @IBOutlet weak var feedImageView: UIImageView!
+    @IBOutlet weak var feedDescription: UILabel!
     var presenter: FeedDetailsViewToPresenterProtocol?
     
     override func viewDidLoad() {
@@ -20,6 +23,10 @@ class FeedDetailsViewController: UIViewController {
 
 extension FeedDetailsViewController: FeedDetailsPresenterToViewProtocol {
     func showFeedDetails(forFeed feed: FeedModel) {
-        print(feed)
+        self.feedTitleLabel.text = feed.title
+        if let imageUrl = feed.imageUrl {
+            self.feedImageView.loadImage(withUrl: imageUrl)
+        }
+        self.feedDescription.text = feed.description
     }
 }
