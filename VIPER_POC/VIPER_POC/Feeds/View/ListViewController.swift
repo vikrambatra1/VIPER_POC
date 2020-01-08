@@ -43,6 +43,7 @@ extension ListViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(feeds[indexPath.row])
+        let parentVC = self.parent as! FeedsViewController
+        parentVC.presenter?.showFeedDetail(forFeed: feeds[indexPath.row])
     }
 }

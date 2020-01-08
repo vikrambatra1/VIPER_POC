@@ -8,9 +8,9 @@
 
 import Foundation
 
-class FeedsInteractor: PresenterToInteractorProtocol {
+class FeedsInteractor: FeedsPresenterToInteractorProtocol {
 
-    var presenter: InteractorToPresenterProtocol?
+    var presenter: FeedsInteractorToPresenterProtocol?
     
     func fetchFeeds() {
         let url = URL(string: FEEDS_API)!
@@ -25,7 +25,7 @@ class FeedsInteractor: PresenterToInteractorProtocol {
         }
     }
 
-    func convertToDataModel(feedImages: [String], feeds: [AnyObject]) -> [FeedModel] {
+    private func convertToDataModel(feedImages: [String], feeds: [AnyObject]) -> [FeedModel] {
         return feeds.enumerated().map({ (index, feed) in
             let feedDict = feed as! [String: String]
             return FeedModel(title: feedDict["title"] ?? "", pubData: feedDict["pubData"] ?? "", description: feedDict["description"] ?? "", link: feedDict["link"] ?? "", imageUrl: feedImages.indices.contains(index) ? feedImages[index] : nil )

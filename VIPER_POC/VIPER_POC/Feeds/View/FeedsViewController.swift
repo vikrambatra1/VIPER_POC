@@ -8,9 +8,9 @@
 
 import UIKit
 
-class FeedsViewController: UIViewController, XMLParserDelegate {
+class FeedsViewController: UIViewController {
 
-    var presenter: ViewToPresenterProtocol?
+    var presenter: FeedsViewToPresenterProtocol?
     @IBOutlet weak var listViewContainer: UIView!
     @IBOutlet weak var gridViewContainer: UIView!
     @IBOutlet weak var navBarButton: UIBarButtonItem!
@@ -39,7 +39,7 @@ class FeedsViewController: UIViewController, XMLParserDelegate {
     }
 }
 
-extension FeedsViewController: PresenterToViewProtocol {
+extension FeedsViewController: FeedsPresenterToViewProtocol {
     func showFeeds(feeds: [FeedModel]) {
         let listViewController = self.children[0] as! ListViewController
         listViewController.feeds = feeds

@@ -43,6 +43,7 @@ extension GridViewController: UICollectionViewDelegate, UICollectionViewDataSour
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print(feeds[indexPath.item])
+        let parentVC = self.parent as! FeedsViewController
+        parentVC.presenter?.showFeedDetail(forFeed: feeds[indexPath.row])
     }
 }

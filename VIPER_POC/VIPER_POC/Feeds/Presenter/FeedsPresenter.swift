@@ -9,22 +9,22 @@
 import Foundation
 import UIKit
 
-class FeedsPresenter: ViewToPresenterProtocol {
+class FeedsPresenter: FeedsViewToPresenterProtocol {
     
-    var view: PresenterToViewProtocol?
-    var interactor: PresenterToInteractorProtocol?
-    var router: PresenterToRouterProtocol?
+    var view: FeedsPresenterToViewProtocol?
+    var interactor: FeedsPresenterToInteractorProtocol?
+    var router: FeedsPresenterToRouterProtocol?
     
     func fetchFeeds() {
         interactor?.fetchFeeds()
     }
 
-    func showFeedDetailsViewController(navigationController: UINavigationController) {
-        router?.pushToFeedDetailsScreen(navigationConroller: navigationController)
+    func showFeedDetail(forFeed feed: FeedModel) {
+        router?.pushFeedDetailScreen(from: view!, forFeed: feed)
     }
 }
 
-extension FeedsPresenter: InteractorToPresenterProtocol {
+extension FeedsPresenter: FeedsInteractorToPresenterProtocol {
     func feedsFetchedSuccess(feeds: [FeedModel]) {
         view?.showFeeds(feeds: feeds)
     }
